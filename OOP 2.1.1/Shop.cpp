@@ -258,3 +258,5 @@ bool Shop::operator!=(const Shop& other)
 	//}
 	//return false;
 }
+
+// Віртуальний деструктор нада, коли треба клас має віртуальну функцію.
