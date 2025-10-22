@@ -1,0 +1,5 @@
+4
+milk1 100 ATB 10.09.2025
+donut1 40 sim23 05.09.2025
+chips1 70 lays 23.08.2025
+chips2 700 lays 23.08.2025
