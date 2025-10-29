@@ -25,6 +25,11 @@ void Product::print() const
 	this->product_date.print(cout);
 }
 
+// Без virtual в реалізації
+//void Product::print() const
+//{
+//}
+
 void Product::print(ostream& os) const
 {
 	os << this->name << " "

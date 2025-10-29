@@ -36,10 +36,10 @@ public:
 	Product(const Product& other);
 
 	// Ввід + вивід
-	void print() const;
-	void print(ostream& os) const;
+	virtual void print() const; // віртуальність в дочірньому зберігається
+	virtual void print(ostream& os) const;
 	void print_short(ostream& os) const;
-	void read(istream& os);
+	virtual void read(istream& os);
 
 	//Геттери
 	string get_name() const;
@@ -62,4 +62,5 @@ public:
 	void operator++();
 	void operator++(int a);
 	
+	// Робін Мартін книжечки( Чистий код)
 };

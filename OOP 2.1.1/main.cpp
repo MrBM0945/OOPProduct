@@ -1,6 +1,7 @@
 ﻿#include "Product.h"
 #include <fstream>
 #include "Shop.h"
+#include "Shop1.h"
 
 void test1();
 void readArray(Product* arr, int n, istream& is);
@@ -8,7 +9,7 @@ void printArray(const Product* arr, int n, ostream& os);
 
 int main()
 {
-	Shop shop1;
+	/*Shop shop1;
 	Shop shop2;
 	shop1.read("AllProducts.txt");
 	shop2.read("AllProducts2.txt");
@@ -20,7 +21,13 @@ int main()
 	cout << endl;
 	cout << "Shop1 + product with price = 300" << endl;
 	Shop shop3 = shop1 + 300;
-	shop3.print(cout);
+	shop3.print(cout);*/
+
+	Shop1 shop1;
+	ifstream f("AllProducts1.txt");
+	shop1.read(f);
+	cout << "Shop 1: " << endl;
+	shop1.print(cout);
 }
 
 void test1()
