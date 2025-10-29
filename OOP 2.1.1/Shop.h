@@ -52,5 +52,4 @@ public:
 	bool operator!=(const Shop& other);
 
 	// Оператори << та >>
-
 };

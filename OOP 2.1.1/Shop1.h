@@ -26,3 +26,4 @@ public:
 	void print(ostream& os) const;
 };
 
+// НЕ продовольчий клас
