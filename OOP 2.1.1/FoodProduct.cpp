@@ -5,6 +5,27 @@ FoodProduct::FoodProduct(string _name, double price, string _manofacture, Date _
 {
 }
 
+FoodProduct* FoodProduct::clone() const
+{
+	cout << "FoodProduct Product " << this << endl;
+	return new FoodProduct(*this);
+}
+
+int FoodProduct::get_days() const
+{
+	return this->days;
+}
+
+void FoodProduct::set_days(int _days)
+{
+	this->days = _days;
+}
+
+char FoodProduct::get_type() const
+{
+	return 'f';
+}
+
 void FoodProduct::print(ostream& os) const{
 	Product::print(os);
 	os << " " << this->days;

@@ -28,6 +28,13 @@ int main()
 	shop1.read(f);
 	cout << "Shop 1: " << endl;
 	shop1.print(cout);
+	Shop1 hui; 
+	Shop1 hui1;
+	shop1.segregate_products(hui, hui1);
+	cout << "FoodShop" << endl;
+	hui.print(cout);
+	cout << "NoFoodShop" << endl;
+	hui1.print(cout);
 }
 
 void test1()

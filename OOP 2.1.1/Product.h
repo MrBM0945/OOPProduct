@@ -34,6 +34,7 @@ public:
 		//cout << "Product(string _name, double _price, string _manufacturer, Date _productDate)" << endl;
 	};
 	Product(const Product& other);
+	virtual ~Product() = default;
 
 	// Ввід + вивід
 	virtual void print() const; // віртуальність в дочірньому зберігається
@@ -46,6 +47,7 @@ public:
 	double get_price() const;
 	string get_manufacturer() const;
 	Date get_productDate() const;
+	virtual char get_type() const;
 
 	//Сеттери
 	void set_name(string _name);
@@ -63,4 +65,5 @@ public:
 	void operator++(int a);
 	
 	// Робін Мартін книжечки( Чистий код)
+	virtual Product* clone() const;
 };

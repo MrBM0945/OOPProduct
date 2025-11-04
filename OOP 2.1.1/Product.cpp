@@ -14,7 +14,6 @@ Product::Product(const Product& other)
 	this->price = other.price;
 	this->manufacturer = other.manufacturer;
 	this->product_date = other.product_date;
-	cout << "in constructor copy" << endl;
 }
 
 void Product::print() const
@@ -77,6 +76,11 @@ string Product::get_manufacturer() const
 Date Product::get_productDate() const
 {
 	return this->product_date;
+}
+
+char Product::get_type() const
+{
+	return 'p';
 }
 
 void Product::set_name(string _name)
@@ -150,4 +154,10 @@ void Product::operator++() {
 
 void Product::operator++(int a) {
 	this->price = this->price * (1 + 0.01);
+}
+
+Product* Product::clone() const
+{
+	cout << "Cloning Product " << this << endl;
+	return new Product(*this);
 }

@@ -13,6 +13,8 @@ private:
 public:
 	Shop1();
 	Shop1(int _max_size);
+	Shop1(const Shop1& other);
+	Shop1& operator=(const Shop1& other);
 	~Shop1();
 
 	//Геттери + сеттер
@@ -24,6 +26,10 @@ public:
 	void read(istream& is);
 	void read(string path);
 	void print(ostream& os) const;
+
+	//Інши методи
+	void addProduct(const Product& p);
+	void segregate_products(Shop1& foodShop, Shop1& NoFoodShop);
 };
 
 // НЕ продовольчий клас
