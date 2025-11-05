@@ -7,7 +7,7 @@ NoFoodProduct::NoFoodProduct(string _name, double price, string _manofacture, Da
 
 NoFoodProduct* NoFoodProduct::clone() const
 {
-    cout << "NoFoodProduct Product " << this << endl;
+    /*cout << "NoFoodProduct Product " << this << endl;*/
     return new NoFoodProduct(*this);
 }
 
@@ -44,4 +44,11 @@ void NoFoodProduct::print(ostream& os) const {
 void NoFoodProduct::read(istream& is){
     Product::read(is);
     is >> this->power >> this->volume;
+}
+
+bool NoFoodProduct::isBig() const
+{
+    const double maxVolume = 100.0;
+    // краще зробити клас, який матиме всі ці константи публічні
+    return (this->volume > maxVolume);
 }

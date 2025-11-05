@@ -15,7 +15,7 @@ void Shop1::clearMemory() {
 	if (this->products != nullptr) {
 		// Пробую size замість max_size
 		for (int i = 0; i < this->size; i++) {
-			cout << "Index " << i << " ptr=" << products[i] << endl;
+			/*cout << "Index " << i << " ptr=" << products[i] << endl;*/
 			if (this->products[i] != nullptr) {
 				delete this->products[i];
 			}
@@ -189,5 +189,19 @@ void Shop1::segregate_products(Shop1& foodShop, Shop1& NoFoodShop)
 			break;
 		}
 	}
+}
+
+void Shop1::test_method()
+{
+	for (int i = 0; i < this->size; i++) {
+		cout << *(this->products[i]);
+		cout << endl;
+		NoFoodProduct* prod = dynamic_cast<NoFoodProduct*>(this->products[i]);
+		if (prod != nullptr) {
+			cout << prod->isBig() << endl;
+		}
+		/*cout << "Type of object" << i + 1 << ": " << typeid(*(this->products[i])).name() << endl;*/
+	}
+
 }
 

@@ -7,7 +7,7 @@ FoodProduct::FoodProduct(string _name, double price, string _manofacture, Date _
 
 FoodProduct* FoodProduct::clone() const
 {
-	cout << "FoodProduct Product " << this << endl;
+	/*cout << "FoodProduct Product " << this << endl;*/
 	return new FoodProduct(*this);
 }
 

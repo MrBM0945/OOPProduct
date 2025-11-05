@@ -30,6 +30,7 @@ public:
 	//Інши методи
 	void addProduct(const Product& p);
 	void segregate_products(Shop1& foodShop, Shop1& NoFoodShop);
+	void test_method();
 };
 
 // НЕ продовольчий клас

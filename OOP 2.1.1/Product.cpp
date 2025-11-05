@@ -158,6 +158,6 @@ void Product::operator++(int a) {
 
 Product* Product::clone() const
 {
-	cout << "Cloning Product " << this << endl;
+	/*cout << "Cloning Product " << this << endl;*/
 	return new Product(*this);
 }

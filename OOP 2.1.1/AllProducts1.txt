@@ -1,7 +1,7 @@
-30
-n milk 100 ATB 10.09.2025 15.0 13.5
+3
+n soap 100 ATB 10.09.2025 15.0 13.5
 f donut 40 sim23 05.09.2025 15
-n chips 70 lays 23.08.2025 15.0 13.5
+n soap2 70 lays 23.08.2025 15.0 13.5
 n bread 80 kyivkhlib 15.10.2026 120.0 100.0
 f yogurt 90 danone 20.09.2025 30
 n shampoo 60 head_shoulders 09.03.2027 95.0 80.0

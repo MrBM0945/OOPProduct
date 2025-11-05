@@ -18,5 +18,7 @@ public:
 	void print(ostream& os) const;
 	void read(istream& is);
 
+	bool isBig() const;
+
 };
 

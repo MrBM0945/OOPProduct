@@ -28,13 +28,17 @@ int main()
 	shop1.read(f);
 	cout << "Shop 1: " << endl;
 	shop1.print(cout);
-	Shop1 hui; 
-	Shop1 hui1;
-	shop1.segregate_products(hui, hui1);
-	cout << "FoodShop" << endl;
-	hui.print(cout);
-	cout << "NoFoodShop" << endl;
-	hui1.print(cout);
+	cout << "Result for test_method(): " << endl;
+	shop1.test_method();
+	//Shop1 a; 
+	//Shop1 b;
+	//shop1.segregate_products(a, b);
+	//cout << "FoodShop: " << endl << endl;
+	//a.print(cout);
+	//cout << "NoFoodShop: " << endl << endl;
+	//b.print(cout);
+
+	// контейнери(map, list, vector, set), алгоритми(for??) та (інтератори на функтори)
 }
 
 void test1()
