@@ -1,143 +1,52 @@
 ﻿#include "Product.h"
 #include <fstream>
-#include "Shop.h"
 #include "Shop1.h"
 
-void test1();
-void readArray(Product* arr, int n, istream& is);
-void printArray(const Product* arr, int n, ostream& os);
-
+// Варіант 1
 int main()
 {
-	/*Shop shop1;
-	Shop shop2;
-	shop1.read("AllProducts.txt");
-	shop2.read("AllProducts2.txt");
-	cout << "Shop 1: " << endl;
-	shop1.print(cout);
-	cout << endl;
-	cout << "Shop 2: " << endl;
-	shop2.print(cout);
-	cout << endl;
-	cout << "Shop1 + product with price = 300" << endl;
-	Shop shop3 = shop1 + 300;
-	shop3.print(cout);*/
-
+	ifstream is("AllProducts1.txt");
+	ifstream is2("AllProducts2.txt");
 	Shop1 shop1;
-	ifstream f("AllProducts1.txt");
-	shop1.read(f);
-	cout << "Shop 1: " << endl;
-	shop1.print(cout);
-	cout << "Result for test_method(): " << endl;
-	shop1.test_method();
-	//Shop1 a; 
-	//Shop1 b;
-	//shop1.segregate_products(a, b);
-	//cout << "FoodShop: " << endl << endl;
-	//a.print(cout);
-	//cout << "NoFoodShop: " << endl << endl;
-	//b.print(cout);
-
-	// контейнери(map, list, vector, set), алгоритми(for??) та (інтератори на функтори)
-}
-
-void test1()
-{
-	Product a; // конструктор за замовчуванням тому що нема користувацьких
-	a.print();
-	cout << endl;
-	Product b("table", 3000, "EpicentrK", Date(3, 9, 2025));
-	b.print();
-	b.change_discont(0.1);
-	b.print();
-
-	Product c = a;
-	c.set_name("group C");
-	c.set_price(10000);
-
-
-	cout << endl;
-	cout << "product a" << endl;
-	a.print();
-	cout << endl;
-	cout << "product c" << endl;
-	c.print();
-	cout << endl;
-
-	b = c;
-
-	cout << "produtc b" << endl;
-	b.print();
-}
-
-void readArray(Product* arr, int n, istream& is)
-{
-	for (int i = 0; i < n; ++i)
-	{
-		arr[i].read(is);
-	}
-}
-
-void printArray(const Product* arr, int n, ostream& os)
-{
-	for (int i = 0; i < n; ++i)
-	{
-		arr[i].print(os);
-		os << endl;
-	}
-}
-
-void test2() {
-	cout << "lol";
-	// не працює, я не розумію чому
-	/*shop5 = shop1 + 300;*/
-	/*shop5 = 300 + shop1;*/
-	/*cout << "Shop 4: " << endl;
-	shop4.addProduct(Product("table", 3000, "Epicentr", Date(3, 9, 2025)));
-	shop4.print(cout);
-	cout << endl;
-	shop1 += shop2 += shop3;
-	cout << "after shop1 += shop2 += shop3: " << endl;
-	cout << "Shop1: " << endl;
+	Shop1 shop2;
+	shop1.read(is);
+	shop2.read(is2);
+	is.close();
+	is2.close();
+	cout << "Shop1 readed from first file: " << endl << endl;;
 	shop1.print(cout);
 	cout << endl;
-	cout << "Shop2: " << endl;
+	cout << "Shop2 readed from second file: " << endl << endl;
+	shop2.print(cout);
+	Shop1 shop3;
+	cout << endl;
+	Shop1 shop3_f = shop3.add_FoodProducts_to_shop(shop1);
+	Shop1 shop3_ff = shop3_f.add_FoodProducts_to_shop(shop2);
+	cout << "Shop3 only food products with days < 7: " << endl << endl;
+	ofstream os("Result1.txt");
+	shop3_ff.print(cout);
+	os << "Shop3 only food products with days < 7: " << endl << endl;
+	shop3_ff.print(os);
+	os.close();
+	cout << endl;
+	cout << "Shop2 before changing: " << endl << endl;
 	shop2.print(cout);
 	cout << endl;
-	cout << "Shop3: " << endl;
-	shop3.print(cout);
+	shop2.set_new_price_for_nofood(50, 200);
+	cout << "Shop2 after changing new_price in range(look at strings for manufacturer +_range): " << endl << endl;
+	ofstream os1("Result2.txt");
+	shop2.print(cout);
+	os1 << "Shop2 after changing new_price in range (look at strings for manufacturer +_range): " << endl << endl;
+	shop2.print(os1);
+	os1.close();
 	cout << endl;
-	cout << (shop2 != shop1) << endl;
-	Shop shopa;
-	Shop shopb;
-	cout << (shopa != shopb) << endl;
-	cout << (shop2 > shop1) << endl;*/
-	Shop shop1;
-	Shop shop2;
-	Shop shop3;
-	shop1.read("AllProducts.txt");
-	//shop2.read("AllProducts2.txt");
-	/*shop3 = shop1;*/
-	cout << "Shop1: " << endl;
-	shop1.print(cout);
-	cout << endl;
-	shop1.changePrice();
-	cout << endl;
-	shop1.print(cout);
-	//cout << "Shop2: " << endl;
-	//shop2.print(cout);
-	//cout << endl;
-	//cout << "Shop3: " << endl;
-	//shop3.print(cout);
-	//cout << endl;
-
-	/*Shop shop4 = shop1 + shop2;*/
-	cout << (shop1 > shop2) << endl;
-	/*Shop shop5 = shop1 + 300;*/
-	Shop shop4 = shop1 + 300;
-	shop4.print(cout);
-	/*shop5.print(cout);*/
+	ofstream os2("Result1_2.txt");
+	os2 << "Shop3 all_new_prices for products: " << endl;
+	os2 << shop3_ff.all_new_prices() << endl;
+	cout << "Shop3 all_new_prices for products: " << endl;
+	cout << shop3_ff.all_new_prices() << endl;
 
 
-	return;
-};
+}
+
+

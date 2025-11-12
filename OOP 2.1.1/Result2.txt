@@ -1,0 +1,7 @@
+Shop2 after changing new_price in range (look at strings for manufacturer +_range): 
+
+soap 10000 ATB_range 10.09.2025 15 13.5
+donut 4000 sim23 05.09.2025 15
+soap2 7000 lays_range 23.08.2025 15 13.5
+bread 8000 kyivkhlib_range 15.10.2026 120 100
+yogurt 9000 danone 20.09.2025 30

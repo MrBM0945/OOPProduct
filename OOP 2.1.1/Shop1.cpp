@@ -13,9 +13,7 @@ void Shop1::createMemory(int _maxSize) {
 void Shop1::clearMemory() {
 
 	if (this->products != nullptr) {
-		// Пробую size замість max_size
 		for (int i = 0; i < this->size; i++) {
-			/*cout << "Index " << i << " ptr=" << products[i] << endl;*/
 			if (this->products[i] != nullptr) {
 				delete this->products[i];
 			}
@@ -59,7 +57,6 @@ Shop1& Shop1::operator=(const Shop1& other) {
 	return *this;
 }
 
-
 Shop1::~Shop1()
 {
 	clearMemory();
@@ -68,6 +65,7 @@ Shop1::~Shop1()
 int Shop1::getMaxSize() const {
 	return this->max_size;
 };
+
 int Shop1::getSize() const {
 	return this->size;
 };
@@ -176,6 +174,7 @@ void Shop1::addProduct(const Product& p) {
 	this->products[this->size++] = p.clone();
 }
 
+// Переписати
 void Shop1::segregate_products(Shop1& foodShop, Shop1& NoFoodShop)
 {
 	for (int i = 0; i < this->size; i++) {
@@ -191,6 +190,39 @@ void Shop1::segregate_products(Shop1& foodShop, Shop1& NoFoodShop)
 	}
 }
 
+Shop1 Shop1::add_FoodProducts_to_shop(const Shop1& other)
+{
+	Shop1 result = *this;
+	for (int i = 0; i < other.size; i++) {
+		FoodProduct* food = dynamic_cast<FoodProduct*>(other.products[i]);
+		if (food != nullptr && food->get_days() < 7) {
+			result.addProduct(*food);
+		}
+	}
+	return result;
+}
+
+void Shop1::set_new_price_for_nofood(int a, int b)
+{
+	for (int i = 0; i < this->size; i++) {
+		NoFoodProduct* nofood = dynamic_cast<NoFoodProduct*>(this->products[i]);
+		if (nofood != nullptr && nofood->new_price() >= a && nofood->new_price() <= b) {
+			this->products[i]->set_manufacturer(this->products[i]->get_manufacturer() + "_range");
+		}
+		this->products[i]->set_price(this->products[i]->get_price() * 100);
+	}
+}
+
+double Shop1::all_new_prices() const
+{
+	double result = 0.0;
+	for (int i = 0; i < this->size; i++) {
+		result = result + this->products[i]->new_price();
+	}
+	return result;
+}
+
+// тест метод
 void Shop1::test_method()
 {
 	for (int i = 0; i < this->size; i++) {
@@ -202,6 +234,5 @@ void Shop1::test_method()
 		}
 		/*cout << "Type of object" << i + 1 << ": " << typeid(*(this->products[i])).name() << endl;*/
 	}
-
 }
 

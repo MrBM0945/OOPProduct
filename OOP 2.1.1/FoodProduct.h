@@ -14,5 +14,7 @@ public:
 
 	void print(ostream& os) const;
 	void read(istream& is);
+
+	double new_price() const override;
 };
 

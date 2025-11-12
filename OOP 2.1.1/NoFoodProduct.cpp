@@ -52,3 +52,14 @@ bool NoFoodProduct::isBig() const
     // краще зробити клас, який матиме всі ці константи публічні
     return (this->volume > maxVolume);
 }
+
+double NoFoodProduct::new_price() const
+{
+    if (this->isBig()) {
+        return Product::new_price() * 2;
+    }
+    else if (this->power > 50) {
+        return Product::new_price() + Product::new_price() / 5.0;
+    }
+    return Product::new_price();
+}

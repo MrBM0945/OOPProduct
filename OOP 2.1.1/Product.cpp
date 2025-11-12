@@ -161,3 +161,8 @@ Product* Product::clone() const
 	/*cout << "Cloning Product " << this << endl;*/
 	return new Product(*this);
 }
+
+double Product::new_price() const
+{
+	return this->price;
+}

@@ -1,0 +1,5 @@
+Shop3 only food products with days < 7: 
+
+donut 40 sim23 05.09.2025 3
+yogurt 90 danone 20.09.2025 5
+sausage 55 yuvileinyi 05.11.2025 1

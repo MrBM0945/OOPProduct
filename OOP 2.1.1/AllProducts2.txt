@@ -1,5 +1,31 @@
-4
-milk1 100 ATB 10.09.2025
-donut1 40 sim23 05.09.2025
-chips1 70 lays 23.08.2025
-chips2 700 lays 23.08.2025
+5
+n soap 100 ATB 10.09.2025 15.0 13.5
+f donut 40 sim23 05.09.2025 15
+n soap2 70 lays 23.08.2025 15.0 13.5
+n bread 80 kyivkhlib 15.10.2026 120.0 100.0
+f yogurt 90 danone 20.09.2025 30
+n shampoo 60 head_shoulders 09.03.2027 95.0 80.0
+f sausage 55 yuvileinyi 05.11.2025 45
+n batteries 40 duracell 21.07.2028 150.0 120.0
+f burger 65 mcbistro 07.09.2025 50
+n detergent 70 ariel 10.02.2027 180.0 150.0
+f water 20 borjomi 15.12.2025 90
+n towel 35 ikea 10.01.2028 220.0 180.0
+f chocolate 110 milka 23.09.2025 180
+n toothpaste 100 colgate 01.02.2026 60.0 50.0
+f sandwich 50 fastyfood 05.09.2025 20
+n soap 120 dove 10.03.2026 45.0 38.0
+f pizza 60 pizzatime 04.09.2025 30
+n sponge 200 cleanmax 11.07.2026 15.0 10.0
+f cake 25 smachnyk 19.08.2025 40
+n lightbulb 40 philips 18.12.2027 85.0 70.0
+f cheese 60 galichina 22.10.2025 60
+n dishwash 90 fairy 03.03.2026 75.0 62.0
+f butter 40 farmfresh 02.10.2025 45
+n toiletpaper 150 zeva 01.06.2026 55.0 43.0
+f oil 90 shchedryi_dar 30.12.2025 75
+n shampoo 85 nivea 04.04.2027 120.0 95.0
+f icecream 120 rud 25.05.2025 20
+n batteries 55 energizer 15.09.2028 160.0 140.0
+f candy 200 roshen 12.08.2025 90
+f cereal 45 nestle 02.05.2026 75

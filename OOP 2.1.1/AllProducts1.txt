@@ -1,11 +1,11 @@
-3
+8
 n soap 100 ATB 10.09.2025 15.0 13.5
-f donut 40 sim23 05.09.2025 15
+f donut 40 sim23 05.09.2025 3
 n soap2 70 lays 23.08.2025 15.0 13.5
 n bread 80 kyivkhlib 15.10.2026 120.0 100.0
-f yogurt 90 danone 20.09.2025 30
+f yogurt 90 danone 20.09.2025 5
 n shampoo 60 head_shoulders 09.03.2027 95.0 80.0
-f sausage 55 yuvileinyi 05.11.2025 45
+f sausage 55 yuvileinyi 05.11.2025 1
 n batteries 40 duracell 21.07.2028 150.0 120.0
 f burger 65 mcbistro 07.09.2025 50
 n detergent 70 ariel 10.02.2027 180.0 150.0

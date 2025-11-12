@@ -3,16 +3,11 @@
 #include <fstream>
 #include <ctime>
 #include "Date.h"
-
-//#include <string>
 using namespace std;
 
 
 class Product
 {
-	// тільки "cin >> p": friend void operator >>(istream& is, Product& p);
- 
-	// Нижній дозволяє ланцюжком cin >> a >> b;
 	friend istream& operator >>(istream& is, Product& p);
 	friend ostream& operator <<(ostream& os, const Product& p);
 private:
@@ -63,7 +58,8 @@ public:
 	//++
 	void operator++();
 	void operator++(int a);
-	
-	// Робін Мартін книжечки( Чистий код)
+
 	virtual Product* clone() const;
+
+	virtual double new_price() const;
 };

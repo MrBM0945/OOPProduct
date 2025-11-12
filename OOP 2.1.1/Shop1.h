@@ -30,6 +30,9 @@ public:
 	//Інши методи
 	void addProduct(const Product& p);
 	void segregate_products(Shop1& foodShop, Shop1& NoFoodShop);
+	Shop1 add_FoodProducts_to_shop(const Shop1& other);
+	void set_new_price_for_nofood(int a, int b);
+	double all_new_prices() const;
 	void test_method();
 };
 

@@ -19,6 +19,7 @@ public:
 	void read(istream& is);
 
 	bool isBig() const;
+	double new_price() const override;
 
 };
 
