@@ -7,7 +7,6 @@ FoodProduct::FoodProduct(string _name, double price, string _manofacture, Date _
 
 FoodProduct* FoodProduct::clone() const
 {
-	/*cout << "FoodProduct Product " << this << endl;*/
 	return new FoodProduct(*this);
 }
 
@@ -35,10 +34,11 @@ void FoodProduct::read(istream& is) {
 	Product::read(is);
 	is >> this->days;
 }
+
 double FoodProduct::new_price() const
 {
 	if (this->days >= 5) {
 		return Product::new_price();
 	}
-	return Product::new_price() - Product::new_price() / 2.0;
+	return Product::new_price()*0.5;
 };

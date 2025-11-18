@@ -175,7 +175,7 @@ void Shop1::addProduct(const Product& p) {
 }
 
 // Переписати
-void Shop1::segregate_products(Shop1& foodShop, Shop1& NoFoodShop)
+void Shop1::segregate_products(Shop1& foodShop, Shop1& NoFoodShop) const
 {
 	for (int i = 0; i < this->size; i++) {
 		char type = this->products[i]->get_type();
@@ -189,7 +189,6 @@ void Shop1::segregate_products(Shop1& foodShop, Shop1& NoFoodShop)
 		}
 	}
 }
-
 
 Shop1 Shop1::add_FoodProducts_to_shop(const Shop1& other)
 {

@@ -128,7 +128,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NoFoodProduct.cpp" />
     <ClCompile Include="Product.cpp" />
-    <ClCompile Include="Shop.cpp" />
     <ClCompile Include="Shop1.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -136,7 +135,6 @@
     <ClInclude Include="FoodProduct.h" />
     <ClInclude Include="NoFoodProduct.h" />
     <ClInclude Include="Product.h" />
-    <ClInclude Include="Shop.h" />
     <ClInclude Include="Shop1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

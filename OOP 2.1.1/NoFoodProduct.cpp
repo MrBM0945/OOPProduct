@@ -55,11 +55,13 @@ bool NoFoodProduct::isBig() const
 
 double NoFoodProduct::new_price() const
 {
+    double price = Product::new_price();
+    double mult = 1.0;
     if (this->isBig()) {
-        return Product::new_price() * 2;
+        mult += 1.0;
     }
-    else if (this->power > 50) {
-        return Product::new_price()*1.2;
+    if (this->power > 50) {
+        mult += 0.2;
     }
-    return Product::new_price();
+    return price * mult;
 }
