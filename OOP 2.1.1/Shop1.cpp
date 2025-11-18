@@ -190,6 +190,7 @@ void Shop1::segregate_products(Shop1& foodShop, Shop1& NoFoodShop)
 	}
 }
 
+
 Shop1 Shop1::add_FoodProducts_to_shop(const Shop1& other)
 {
 	Shop1 result = *this;

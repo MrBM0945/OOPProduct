@@ -37,7 +37,7 @@ void FoodProduct::read(istream& is) {
 }
 double FoodProduct::new_price() const
 {
-	if (this->days > 5) {
+	if (this->days >= 5) {
 		return Product::new_price();
 	}
 	return Product::new_price() - Product::new_price() / 2.0;

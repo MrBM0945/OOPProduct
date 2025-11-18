@@ -45,8 +45,6 @@ int main()
 	os2 << shop3_ff.all_new_prices() << endl;
 	cout << "Shop3 all_new_prices for products: " << endl;
 	cout << shop3_ff.all_new_prices() << endl;
-
-
 }
 
 

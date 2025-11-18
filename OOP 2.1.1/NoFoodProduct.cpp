@@ -59,7 +59,7 @@ double NoFoodProduct::new_price() const
         return Product::new_price() * 2;
     }
     else if (this->power > 50) {
-        return Product::new_price() + Product::new_price() / 5.0;
+        return Product::new_price()*1.2;
     }
     return Product::new_price();
 }
